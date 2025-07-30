@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import baseUrl from "../../../config";
 
-const Sidebar = () => {
+export default function Sidebar() {
   const [chatList, setChatList] = useState([]);
   const userInfo = JSON.parse(localStorage.loginData);
   const navigate = useNavigate();
@@ -36,6 +36,4 @@ const Sidebar = () => {
       ))}
     </div>
   );
-};
-
-export default Sidebar;
+}
