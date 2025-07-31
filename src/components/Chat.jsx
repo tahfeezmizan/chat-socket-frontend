@@ -8,6 +8,7 @@ const Chat = () => {
   const userInfo = JSON.parse(localStorage.loginData);
   const [text, setText] = useState("");
   const { chatId } = useParams();
+  console.log("Chat ID", chatId);
   const socket = useMemo(() => io("http://localhost:5000"), []);
 
   useEffect(() => {
